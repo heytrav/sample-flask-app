@@ -13,7 +13,7 @@ db = SQLAlchemy(app)
 @app.route('/')
 def index():
     result = db.engine.execute(
-        'select image from images where id = %d ' % random.randint(0,9)
+        'select image from images where id = %d ' % random.randint(1,11)
     )
     url = result.first()[0]
     return render_template('index.html', url=url, server=config.Config.SERVER)
