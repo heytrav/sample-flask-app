@@ -21,5 +21,4 @@ def index():
                            app_version=config.Config.APPVERSION)
 
 if __name__ == "__main__":
-    raise Exception("Something bad happens")
     app.run(host="0.0.0.0")
